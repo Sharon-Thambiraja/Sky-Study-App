@@ -18,6 +18,7 @@ class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Color(0xFF1C2341),
         appBar: AppBar(
           backgroundColor: Color(0xFF1C2341),
           title: Text('SignIn'),
@@ -27,12 +28,6 @@ class _SignInScreenState extends State<SignInScreen> {
             color: Color(0xFF1C2341),
             child: Stack(
               children: [
-                SvgPicture.asset(
-                  "assets/icons/bg.svg",
-                  fit: BoxFit.fill,
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height,
-                ),
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
@@ -70,7 +65,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         ),
                       ),
 
-                      SizedBox(height: 32),
+                      SizedBox(height: 22),
 
                       InkWell(
                         onTap: _onSignInButtonPressed,

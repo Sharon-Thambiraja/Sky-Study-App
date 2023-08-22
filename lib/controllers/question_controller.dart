@@ -49,10 +49,7 @@ class QuestionController extends GetxController
   // called immediately after the widget is allocated memory
   @override
   void onInit() async {
-    print("karan  is first ");
-
     print(_questions);
-    print("karan is  masss");
 
     // Our animation duration is 60 s
     // so our plan is to fill the progress bar within 60s
@@ -70,7 +67,6 @@ class QuestionController extends GetxController
     // Once 60s is completed go to the next qn
     await fetchQuestionsByLevel(level);
 
-    print("karan is now populated");
     print(_questions);
     super.onInit();
   }
@@ -184,7 +180,6 @@ class QuestionController extends GetxController
       // Once timer is finish go to the next qn
       _animationController.forward().whenComplete(nextQuestion);
     } else {
-      print("Karan number of corrected answers");
       print(numOfCorrectAns);
       Get.to(ScoreScreen(
         level: level,
