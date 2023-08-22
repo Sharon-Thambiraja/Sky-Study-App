@@ -80,12 +80,6 @@ class QuestionController extends GetxController
 
   // // called just before the Controller is deleted from memory
 
-  void addMCQData() {
-    for (var mcqData in sample_data) {
-      _databaseReference.push().set(mcqData);
-    }
-  }
-
   Future<void> fetchQuestions1() async {
     final DatabaseReference database = FirebaseDatabase.instance.reference();
 

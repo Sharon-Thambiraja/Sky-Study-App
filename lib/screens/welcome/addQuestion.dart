@@ -20,7 +20,7 @@ class _AddQuestionScreenState extends State<AddQuestionScreen> {
   Future<void> classifyQuestion() async {
     final response = await http.post(
       Uri.parse(
-          'http://16.170.225.165:5000/predict_level'), // Replace with your backend endpoint
+          'http://16.170.208.40:5000/predict_level'), // Replace with your backend endpoint
       body: json.encode({
         'question': questionController.text,
         'options': optionsController.text.split('\n'),
