@@ -1,3 +1,5 @@
+//this code snippet represents the main screen where users take quizzes.
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app_pilot/controllers/question_controller.dart';

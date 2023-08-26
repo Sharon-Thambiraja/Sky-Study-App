@@ -62,7 +62,7 @@ class NewWelcomeScreen extends StatelessWidget {
                                   BorderRadius.all(Radius.circular(12)),
                             ),
                             child: Text(
-                              "LogIn",
+                              "Log In",
                               style: Theme.of(context)
                                   .textTheme
                                   .button
@@ -88,7 +88,7 @@ class NewWelcomeScreen extends StatelessWidget {
                                   BorderRadius.all(Radius.circular(12)),
                             ),
                             child: Text(
-                              "SignIn",
+                              "Sign In",
                               style: Theme.of(context)
                                   .textTheme
                                   .button

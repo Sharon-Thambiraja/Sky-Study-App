@@ -1,3 +1,9 @@
+/*this code snippet represents the logic and functionality behind the quiz feature. 
+It handles the display and interaction with physics questions based on the chosen difficulty level. 
+The controller manages user responses, tracks progress, and controls animations for timed responses. 
+The fetched questions are stored in the _questions list and shuffled for a randomized experience. 
+The code also manages navigation between questions, calculates scores, and facilitates a smooth user experience during the quiz.*/
+
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';

@@ -1,3 +1,6 @@
+/*this code snippet represents the welcome screen where users are introduced to the quiz experience. 
+  Users are encouraged to start the quiz by tapping the "Let's Start Quiz" button.*/
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';

@@ -1,3 +1,7 @@
+/*this code snippet represents the screen where users can view their score after completing a quiz. 
+The user's score is calculated and displayed, along with visual elements to enhance the user experience. 
+Additionally, the user's score is stored in the Firebase Realtime Database for future reference.*/
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +33,6 @@ class ScoreScreen extends StatelessWidget {
 
     return WillPopScope(
       onWillPop: () async {
-      
         // Handle the back button press
         Navigator.pushReplacement(
           context,

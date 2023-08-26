@@ -32,7 +32,7 @@ class MyStatelessWidget extends StatelessWidget {
                     height: 50,
                   ),
                   Text(
-                    "One day I will become a \nPilot",
+                    "Let's reach to the skies together!",
                     style: Theme.of(context)
                         .textTheme
                         .headline4!
