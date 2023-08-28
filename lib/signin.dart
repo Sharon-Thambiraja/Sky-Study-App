@@ -5,6 +5,7 @@ import 'package:lottie/lottie.dart';
 import 'package:quiz_app_pilot/constants.dart';
 import 'package:quiz_app_pilot/screens/welcome/welcome_screen.dart';
 import 'package:quiz_app_pilot/start.dart';
+import 'package:quiz_app_pilot/userscreen.dart';
 
 class SignInScreen extends StatefulWidget {
   @override
@@ -21,7 +22,7 @@ class _SignInScreenState extends State<SignInScreen> {
         backgroundColor: Color(0xFF1C2341),
         appBar: AppBar(
           backgroundColor: Color(0xFF1C2341),
-          title: Text('SignIn'),
+          title: Text('Log In'),
         ),
         body: SingleChildScrollView(
           child: Container(
@@ -101,8 +102,8 @@ class _SignInScreenState extends State<SignInScreen> {
           .createUserWithEmailAndPassword(
               email: _emailController.text, password: _passwordController.text);
       setState(() {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => MyStatelessWidget()));
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => UserDetails()));
       });
 
       print("dei succes da");

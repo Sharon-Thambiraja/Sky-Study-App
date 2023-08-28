@@ -12,7 +12,7 @@ class QuizLevelSelection extends StatelessWidget {
       backgroundColor: Color(0xFF1C2341),
       appBar: AppBar(
         backgroundColor: Color(0xFF1C2341),
-        title: Text('Select Quiz Level'),
+        title: Text('Select Difficulty Level'),
       ),
       body: Center(
         child: Column(

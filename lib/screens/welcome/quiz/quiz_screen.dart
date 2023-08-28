@@ -1,5 +1,3 @@
-//this code snippet represents the main screen where users take quizzes.
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app_pilot/controllers/question_controller.dart';
@@ -16,14 +14,10 @@ class QuizScreen extends StatefulWidget {
 
 class _QuizScreenState extends State<QuizScreen> {
   late QuestionController _controller;
-
-  @override
   void initState() {
     super.initState();
-    setState(() {
-      _controller = Get.put(QuestionController(widget.level));
-      _controller.questions;
-    });
+    // Initialize the QuestionController here
+    _controller = Get.put(QuestionController(widget.level));
   }
 
   @override

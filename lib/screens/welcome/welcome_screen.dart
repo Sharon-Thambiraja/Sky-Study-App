@@ -1,6 +1,3 @@
-/*this code snippet represents the welcome screen where users are introduced to the quiz experience. 
-  Users are encouraged to start the quiz by tapping the "Let's Start Quiz" button.*/
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -28,11 +25,11 @@ class WelcomeScreen extends StatelessWidget {
                 children: [
                   Spacer(flex: 2), //2/6
                   Text(
-                    "Let's Play Quiz,",
+                    "Let's Start the Test,",
                     style: Theme.of(context).textTheme.headline4!.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
-                  Text("Best of luck"),
+                  Text("BEST OF LUCK!!!"),
                   Spacer(), // 1/6
 
                   Spacer(), // 1/6
@@ -48,7 +45,7 @@ class WelcomeScreen extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
                       child: Text(
-                        "Lets Start Quiz",
+                        "Start",
                         style: Theme.of(context)
                             .textTheme
                             .button
@@ -68,15 +65,12 @@ class WelcomeScreen extends StatelessWidget {
 
   Future<void> fetchQuestions() async {
     final DatabaseReference database = FirebaseDatabase.instance.reference();
-    print("karan is ");
+
     DataSnapshot snapshot =
         await database.child('QuestionsList').once() as DataSnapshot;
 
     if (snapshot.value != null && snapshot.value is Map) {
-      print("karan is mass");
-
       print(snapshot.value);
-      print("karan is thamamass");
 
       Map<dynamic, dynamic> data = snapshot.value as Map<dynamic, dynamic>;
     }

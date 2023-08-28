@@ -1,7 +1,3 @@
-/*this code snippet represents the screen where administrators can add new questions to the question bank. 
-Administrators input the question text, options, and correct answer. 
-The system predicts the difficulty level of the question and adds it to the Firebase Realtime Database.*/
-
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -24,7 +20,7 @@ class _AddQuestionScreenState extends State<AddQuestionScreen> {
   Future<void> classifyQuestion() async {
     final response = await http.post(
       Uri.parse(
-          'http://13.49.67.120/predict_level'), // Replace with your backend endpoint
+          'http://16.171.155.122:5000/predict_level'), // Replace with your backend endpoint
       body: json.encode({
         'question': questionController.text,
         'options': optionsController.text.split('\n'),

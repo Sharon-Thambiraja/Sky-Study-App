@@ -26,16 +26,19 @@ class NewWelcomeScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         SizedBox(
-                          height: 50,
+                          height: 80,
                         ), //2/6
-                        Text(
-                          "Welcome To Sky Study ",
-                          style: Theme.of(context)
-                              .textTheme
-                              .headline4!
-                              .copyWith(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
+                        Center(
+                          child: Text(
+                            "Welcome To \nSky Study",
+                            style:
+                                Theme.of(context).textTheme.headline4!.copyWith(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                            textAlign: TextAlign
+                                .center, // To center-align the text horizontally within the Text widget
+                          ),
                         ),
 
                         SizedBox(
@@ -88,7 +91,7 @@ class NewWelcomeScreen extends StatelessWidget {
                                   BorderRadius.all(Radius.circular(12)),
                             ),
                             child: Text(
-                              "Sign In",
+                              "Sign Up",
                               style: Theme.of(context)
                                   .textTheme
                                   .button

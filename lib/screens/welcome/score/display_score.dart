@@ -1,7 +1,3 @@
-/* this code snippet represents the screen where users can view their quiz scores. 
-The user's scores are fetched from the Firebase Realtime Database and displayed in a user-friendly list format, 
-providing users with feedback on their performance in the quizzes they've taken.*/
-
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -28,7 +24,7 @@ class _UserScoresPageState extends State<UserScoresPage> {
 
   Future<void> _fetchUserData() async {
     _user = _auth.currentUser;
-    print("start karan ");
+  
     if (_user != null) {
       _userScoreRef
           .child(_user!.uid)
@@ -44,7 +40,7 @@ class _UserScoresPageState extends State<UserScoresPage> {
               snapshot.value as Map<dynamic, dynamic>;
           List<int> scores =
               scoresMap.values.cast<int>().toList().reversed.toList();
-          print("karan list");
+        
           print(scores);
           setState(() {
             _scores = scores;
@@ -56,6 +52,7 @@ class _UserScoresPageState extends State<UserScoresPage> {
     }
 
     print(_scores);
+
   }
 
   @override

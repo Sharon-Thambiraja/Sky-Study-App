@@ -88,7 +88,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 22.0),
+                      SizedBox(height: 32.0),
                       InkWell(
                         onTap: () => _signIn(context),
                         child: Container(
