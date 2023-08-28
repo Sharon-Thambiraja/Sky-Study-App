@@ -106,9 +106,9 @@ class _SignInScreenState extends State<SignInScreen> {
             context, MaterialPageRoute(builder: (context) => UserDetails()));
       });
 
-      print("dei succes da");
+      print("Success");
     } on FirebaseAuthException catch (e) {
-      print("podadunda");
+      print("Fail");
     }
     String email = _emailController.text;
     String password = _passwordController.text;
